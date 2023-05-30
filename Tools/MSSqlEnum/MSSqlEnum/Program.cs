@@ -87,11 +87,6 @@ namespace MSSQLEnum
 
             // connect to sql server
             SqlConnection conn = new SqlConnection(conString);
-            if(writeToFile)
-            {
-                StreamWriter sw = File.CreateText(@"c:\windows\tasks\result.txt");
-            }
-           
 
             // catch errors
             try
@@ -1197,14 +1192,14 @@ namespace MSSQLEnum
             // created as part of osep course
 
             var p = new Program();
-            p.printBanner();
+           
             if (args.Length < 1)
             {
                 p.printhelp();
                 Environment.Exit(1);
 
             }
-           
+            p.printBanner();
             var myargs = p.ArgumentParse(args);
 
             SqlConnection conn = null;
