@@ -52,7 +52,7 @@ namespace MSSQLEnum
         private void writeOutput(string type, string message)
         {
             Dictionary<string, string> msgtype = new Dictionary<string, string>();
-            msgtype.Add("warning","[-]");
+            msgtype.Add("error","[-]");
             msgtype.Add("success", "[+]");
             msgtype.Add("info", "[*]");
             msgtype.Add("none", "");
